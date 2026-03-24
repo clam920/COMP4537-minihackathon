@@ -1,5 +1,5 @@
 const http = require('http');
-const CORS_ORIGIN = process.env.CORS_ORIGIN || 'https://apiz.ca';
+const CORS_ORIGIN = process.env.CORS_ORIGIN || 'https://illustrious-gumdrop-3c7afa.netlify.app';
 const server = http.createServer((req, res) => {
     // CORS headers
     res.setHeader('Access-Control-Allow-Origin', CORS_ORIGIN);
