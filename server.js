@@ -1,7 +1,8 @@
 const http = require('http');
+const CORS_ORIGIN = process.env.CORS_ORIGIN || 'https://apiz.ca';
 const server = http.createServer((req, res) => {
     // CORS headers
-    res.setHeader('Access-Control-Allow-Origin', 'https://apiz.ca');
+    res.setHeader('Access-Control-Allow-Origin', CORS_ORIGIN);
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -66,5 +67,5 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 //DeepSeek Was used for this
